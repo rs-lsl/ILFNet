@@ -1,4 +1,4 @@
-# PFNet
+# ILFNet
 The code of "Accurate Precipitation Forecasting by Efficiently Learning from Massive Atmospheric Variables and Scarce Precipitation Samples".
 
 To get the predicted results:
