@@ -30,7 +30,7 @@ class SimVP_Model_x(nn.Module):
         print('drop_rate: ', args.drop)
         act_inplace = False
         self.enc = nn.Sequential(
-            Encoder(C, args.era5_shape[0], hid_S, N_S, spatio_kernel_enc, H, W, self.H_d, self.W_d,
+            Encoder(C, args.era5_shape[0], hid_S, N_S, spatio_kernel_enc, args.tar_size[0]-2*args.border_tar[0], args.tar_size[1]-2*args.border_tar[1], self.H_d, self.W_d,
                     act_inplace=act_inplace, drop_rate=args.drop))       #   C_in, C_hid, N_S, spatio_kernel, act_inplace=True
 
         self.dec = Decoder(hid_S, out_ch, N_S, spatio_kernel_dec, self.H_d, self.W_d,
