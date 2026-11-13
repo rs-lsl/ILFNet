@@ -141,7 +141,7 @@ if __name__ == '__main__':
                                int(args.tar_size[1] / tmp_scale_j) + 1]
         args.tar_L1_shape = [args.L1_shape[0], args.tar_size[0] - 2 * args.border_tar[0],
                              args.tar_size[1] - 2 * args.border_tar[1]]
-        in_shape = [args.batch_size, args.input_time_length, *args.L1_shape]
+        in_shape = [args.batch_size, args.input_time_length, *args.tar_L1_shape]
         args.dem_shape = (1200, 2300)
         args.dem_ratio = (int(args.dem_shape[0] / args.L1_shape[-2]), int(args.dem_shape[1] / args.L1_shape[-1]))
         print('args.dem_ratio', args.dem_ratio)
